@@ -201,14 +201,14 @@
         "options": {
           "classifier": {
             "app": {
-              "appId": "",
-              "model": "openai/gpt-4o-mini"
+              "appId": "your-app-id",
+              "model": "qwen3-4b-instruct"
             }
           },
           "modelsByComplexity": {
-            "low": "openai/gpt-4o-mini",
-            "medium": "openai/gpt-4o",
-            "high": "openai/gpt-5"
+            "low": "qwen3-4b-instruct",
+            "medium": "qwen3-8b",
+            "high": "gemma-4-26b-a4b-it"
           }
         }
       },
