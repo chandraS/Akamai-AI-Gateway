@@ -201,14 +201,14 @@
         "options": {
           "classifier": {
             "app": {
-              "appId": "your-app-id",
+              "appId": "config_4702ef91a512413eb825cae7fb4c8a32",
               "model": "qwen3-4b-instruct"
             }
           },
           "modelsByComplexity": {
-            "low": "qwen3-4b-instruct",
-            "medium": "qwen3-8b",
-            "high": "gemma-4-26b-a4b-it"
+            "low": "qwen/qwen3-4b-instruct",
+            "medium": "qwen/qwen3-8b",
+            "high": "google/gemma-4-26b-a4b-it"
           }
         }
       },
