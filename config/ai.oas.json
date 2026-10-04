@@ -6,6 +6,34 @@
     "description": "A unified API gateway for multiple AI providers. OpenAI-compatible ops are served under /{app_id}/v1/*, AWS Bedrock Runtime ops under /{app_id}/model/{modelId}/{operation}; other paths under /{app_id} are rejected."
   },
   "paths": {
+    "/test-akamai": {
+      "post": {
+        "summary": "Test direct Akamai Serverless Inference connectivity",
+        "operationId": "testAkamaiInference",
+        "responses": {
+          "200": {
+            "description": "Successful Akamai inference response"
+          },
+          "500": {
+            "description": "Missing environment configuration"
+          },
+          "502": {
+            "description": "Unable to reach Akamai inference"
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "default",
+            "module": "$import(./modules/test-akamai)",
+            "options": {}
+          },
+          "policies": {
+            "inbound": []
+          }
+        }
+      }
+    },
     "/u/:app_id/(.*)": {
       "x-zuplo-path": {
         "pathMode": "url-pattern"
